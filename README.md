@@ -9,7 +9,7 @@
 
 # Yêu cầu mô-đun
 * màu sắc
-* màu sắc
+* bức tranh màu
 
 # Cách sử dụng
        
