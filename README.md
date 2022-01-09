@@ -19,10 +19,10 @@
     _|    \__, |____/ ____/ \___/ ____/ _____/ \___|_|   _| .__/ \__|  
            ____/                                            _|         
                                                                
-  Tập lệnh python DDos | Tập lệnh dùng để kiểm tra ddos | Tấn công Ddos      
-  Tác giả: ___T7hM1___                                               
-  Github: https://github.com/DauDau432/pyddos                             
-  Version: 3.0 
+    Tập lệnh python DDos | Tập lệnh dùng để kiểm tra ddos | Tấn công Ddos      
+    Tác giả: ___T7hM1___                                               
+    Github: https://github.com/DauDau432/pyddos                             
+    Version: 3.0 
 
     usage: ./pyddos -t [target] -p [port] -t [number threads]
 
