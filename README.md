@@ -19,31 +19,31 @@
     _|    \__, |____/ ____/ \___/ ____/ _____/ \___|_|   _| .__/ \__|  
            ____/                                            _|         
                                                                
-        DDos python script | Script used for testing ddos | Ddos attack     
-         Author: ___T7hM1___                                                
-         Github: http://github.com/t7hm1/pyddos                             
-        Version:2.0 
+  Tập lệnh python DDos | Tập lệnh dùng để kiểm tra ddos | Tấn công Ddos      
+  Tác giả: ___T7hM1___                                               
+  Github: https://github.com/DauDau432/pyddos                             
+  Version: 3.0 
 
     usage: ./pyddos -t [target] -p [port] -t [number threads]
 
-    optional arguments:
-    -h, --help       show this help message and exit
-    -v, --version    show program's version number and exit
+    đối số tùy chọn:
+    -h, --help       hiển thị thông báo trợ giúp này và thoát
+    -v, --version    hiển thị số phiên bản của chương trình và thoát
 
-    options:
+    tùy chọn:
 
-    -d <ip|domain>   Specify your target such an ip or domain name
-    -t <float>       Set timeout for socket
-    -T <int>         Set threads number for connection (default = 1000)
-    -p <int>         Specify port target (default = 80) |Only required with pyslow attack|
-    -s <int>         Set sleep time for reconnection
-    -i <ip address>  Specify spoofed ip unless use fake ip
-    -Request         Enable request target
-    -Synflood        Enable synflood attack
-    -Pyslow          Enable pyslow attack
-    --fakeip         Option to create fake ip if not specify spoofed ip
+    -d <ip|domain>   Chỉ định mục tiêu của bạn như một ip hoặc tên miền
+    -t <float>       Đặt thời gian chờ cho ổ cắm
+    -T <int>         Đặt số luồng cho kết nối (mặc định = 1000)
+    -p <int>         Chỉ định mục tiêu cổng (mặc định = 80) | Chỉ bắt buộc với tấn công pyslow |
+    -s <int>         Đặt thời gian ngủ để kết nối lại
+    -i <ip address>  Chỉ định ip giả mạo trừ khi sử dụng ip giả
+    -Request         Bật mục tiêu yêu cầu
+    -Synflood        Bật tấn công synflood
+    -Pyslow          Bật tấn công pyslow
+    --fakeip         Tùy chọn tạo ip giả nếu không chỉ định ip giả mạo
 
-    Example:
-         ./pyddos -d www.example.com -p 80 -T 2000 -Pyslow
+    Thí dụ:
+        ./pyddos -d www.example.com -p 80 -T 2000 -Pyslow
         ./pyddos -d www.domain.com -s 100 -Request
         ./pyddos -d www.google.com -Synflood -T 5000 -t 10.0
