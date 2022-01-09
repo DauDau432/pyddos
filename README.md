@@ -24,7 +24,7 @@
     Github: https://github.com/DauDau432/pyddos                             
     Version: 3.0 
 
-    usage: ./pyddos -t [target] -p [port] -t [number threads]
+    cách sử dụng: ./pyddos -t [target] -p [port] -t [number threads]
 
     đối số tùy chọn:
     -h, --help       hiển thị thông báo trợ giúp này và thoát
