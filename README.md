@@ -1,20 +1,17 @@
 # pyddos.py
 
-* This is my new update 
-* This script have 3 type of ddos attacks : SYNFLOOD | REQUEST | Pyslow
-* Script has pyslow attack type which is similar to slowloris attack
+* Đây là bản cập nhật mới của tôi
+* Script này có 3 kiểu tấn công ddos: SYNFLOOD | YÊU CẦU | Pyslow
+* Script có kiểu tấn công pyslow tương tự như kiểu tấn công slowloris
 
-# Note
-* I wrote this script for educational not for destructive purposes and illegal actions, so I won't be responsible for that  
+# Ghi chú
+* Tôi viết kịch bản này cho mục đích giáo dục không nhằm mục đích phá hoại và các hành động bất hợp pháp, vì vậy tôi sẽ không chịu trách nhiệm về điều đó
 
+# Yêu cầu mô-đun
+* màu sắc
+* màu sắc
 
-# Requires module
-* termcolor
-* colorama
-
-
-
-# Usage
+# Cách sử dụng
        
       _ \        __ \  __ \               ___|           _)       |   
      |   | |   | |   | |   |  _ \   __| \___ \   __|  __| | __ \  __|  
